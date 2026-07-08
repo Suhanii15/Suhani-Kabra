@@ -14,7 +14,7 @@ const Navbar = () => {
       </div>
       <div className=" flex flex-row bg-yellow-400 font-bold cursor-pointer text-slate-900 rounded-full px-3 py-1 hover:bg-yellow-300">
         Contact Me
-        <Smile className="ml-2" />
+        <Smile className="animate-spin ml-2" />
       </div>
     </nav>
   )

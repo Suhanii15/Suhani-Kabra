@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../components/navbar.jsx'
 import profileImg from '../assets/Photo.jpeg'
 import {motion } from 'framer-motion'
+import Badges from '../components/Badges.jsx'
 
 const landingPage = () => {
   return (
@@ -75,10 +76,16 @@ I have hands on experience in building real-world projects based on Full Stack, 
 <button className="rounded-full mt-4 font-semibold text-lg shadow-md bg-yellow-400 text-slate-900 px-3 py-2 hover:bg-yellow-300 transition-colors duration-300 cursor-pointer" >
     View Resume
 </button>
-
-    </div>
+    </div>    
 
 </div>
+
+
+<div>
+    <Badges className="mt-10 mx-auto mr-0" />
+</div>
+
+
 
  </div>
 
