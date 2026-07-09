@@ -6,9 +6,46 @@ import Badges from '../components/Badges.jsx'
 import { Coffee } from 'lucide-react';
 import { Headphones } from 'lucide-react';
 import { useState } from 'react'
-
+import ProjectCard from '../components/projectCard.jsx'
+import Lecturely from '../assets/Lecturely.png'
+import CodeDetector from '../assets/CodeDetector.png'
+import SmartTravel from '../assets/SmartTravel.png'
+import { useEffect } from 'react'
 
 const landingPage = () => {
+const projectsData=[
+    {
+        id : 1,
+        tag : "CODE-DETECTOR",
+        title: "Github Repository Analyser",
+        description:"Code Detector is a full-stack developer tool that analyzes public GitHub repositories and predicts which source files are most likely to contain defects Instead of relying only on static code analysis, it combines repository history, developer activity, and software engineering metrics with a Machine Learning model to estimate bug risk for every file.",
+        githubUrl:"https://github.com/Suhanii15/Code-Detector.git",
+        liveUrl :"https://drive.google.com/file/d/1UAneU2AuPUenUzsT-pQ5pw3ebxKvDU92/view",
+      imageSrc: CodeDetector, 
+      stickyTop: "top-[10vh]" 
+    },
+     {
+        id : 2,
+        tag : "SMART-TRAVEL",
+        title: " AI Powered Collaborative Travel Planner",
+        description:"SmartTravel is a full-stack AI-powered travel planning platform that helps users create personalized itineraries, estimate trip budgets, collaborate with friends, and manage travel plans from a single dashboard Built using the MERN stack with Gemini AI integration, Google OAuth authentication, and real-time collaboration features.",
+       githubUrl :"https://github.com/Suhanii15/Smart-Travel",
+        liveUrl : "https://smart-travel-alpha.vercel.app/",
+      imageSrc: SmartTravel, 
+      stickyTop: "top-[14vh]" 
+    },
+     {
+        id : 3,
+        tag : "Lecturely",
+        title: "Get Structured Notes",
+        description:"Lecturely is a full-stack web application that helps students convert recorded lectures into structured, editable study notes. It focuses on productivity, clarity, and usability, allowing users to manage lectures, view generated notes, highlight important parts, and export notes in multiple formats.",
+         githubUrl:"https://github.com/Suhanii15/Lecturely",
+         liveUrl : "https://lecturely-wheat.vercel.app/",
+      imageSrc: Lecturely, 
+      stickyTop: "top-[18vh]" 
+    }
+]
+
     //for blocks
     const containerVariants ={
         hidden : {opacity : 0},
@@ -40,17 +77,44 @@ const landingPage = () => {
     });
   }
 
-  //ccords will hav e
+  const [activeSection, setActiveSection]=useState('home');
+  useEffect(()=>{
+    const sections=document.querySelectorAll('#home, #projects');
+
+    const observerOptions={
+        root : null,  //uses viewPort window
+     rootMargin: '-30% 0px -60% 0px', // Triggers when the section takes up the sweet-spot center of the screen
+      threshold: 0,
+    };
+  
+
+  const observerCallback=(entries) => {
+    entries.forEach((entry)=>{
+        if(entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+    });
+  };
+  
+
+  const observer= new IntersectionObserver(observerCallback, observerOptions);
+  sections.forEach((section) => observer.observe(section));
+
+  return () => observer.disconnect();
+}, []);
+
 
   return (
-    <section className="min-h-screen bg-slate-950 bg-[#14141D] p-4 pt-24">
+    <div classNamme="scroll-smooth">
+    <section id="home"
+     className="min-h-screen bg-slate-950 bg-[#14141D] p-4 pt-24">
         {/* Background Pattern */}
         <div 
         className="absolute inset-0 h-full w-full bg-[linear-gradient(to_right,#80808025_1px,transparent_1px),linear-gradient(to_bottom,#80808025_1px,transparent_1px)] bg-[size:60px_60px]" 
         aria-hidden="true"
       />
 
- <Navbar />
+ <Navbar activeSection={activeSection} />
  {/* Main Content */}
       <div className="relative z-10 text-center mt-10">
 
@@ -233,17 +297,38 @@ I have hands on experience in building real-world projects based on Full Stack, 
     duration: 2.5,
     repeat: Infinity,
     ease: "easeInOut",
-  }}>
-    <Badges className="mt-0 mx-auto mr-0" />
+  }}
+  onClick={()=>document.getElementById("projects")?.scrollIntoView({behavior : "smooth"})}>
+    
+    <Badges 
+     className="mt-0 mx-auto mr-0 hover:cursor-pointer" />
+    
 </motion.div>
 
 
 
  </div>
-
-
-   
     </section>
+    {/* marks the ending of first section of our landing page*/}
+
+     <section id="projects"
+     className="relative h-[300vh] px-4 bg-slate-950 bg-[#14141D] md:px-8 py-12 flex flex-col gap-12">
+        {projectsData.map((project) => (
+          <ProjectCard key={project.id} project={project} />
+        ))}
+
+       
+      </section>
+      <section  className="relative h-[300vh] px-4 bg-slate-950 bg-[#14141D] md:px-8 py-12 flex flex-col gap-12">
+        <a href="https://github.com/Suhanii15"
+         target="_blank"
+  rel="noopener noreferrer">
+       <button className="bg-yellow-400 text-sm font-semibold w-40 rounded-full px-3 py-3 mx-170 mt-3 hover:cursor-pointer">
+            More Projects
+        </button>
+        </a>
+</section>
+</div>
   )
 }
 
