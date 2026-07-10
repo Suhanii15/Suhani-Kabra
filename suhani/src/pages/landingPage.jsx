@@ -11,6 +11,7 @@ import Lecturely from '../assets/Lecturely.png'
 import CodeDetector from '../assets/CodeDetector.png'
 import SmartTravel from '../assets/SmartTravel.png'
 import { useEffect } from 'react'
+import MarqueeSection from '../components/Marquee.jsx'
 
 const landingPage = () => {
 const projectsData=[
@@ -105,7 +106,7 @@ const projectsData=[
 
 
   return (
-    <div classNamme="scroll-smooth">
+    <div className="scroll-smooth">
     <section id="home"
      className="min-h-screen bg-slate-950 bg-[#14141D] p-4 pt-24">
         {/* Background Pattern */}
@@ -323,10 +324,12 @@ I have hands on experience in building real-world projects based on Full Stack, 
         <a href="https://github.com/Suhanii15"
          target="_blank"
   rel="noopener noreferrer">
-       <button className="bg-yellow-400 text-sm font-semibold w-40 rounded-full px-3 py-3 mx-170 mt-3 hover:cursor-pointer">
+       <button className="bg-yellow-400 text-lg font-semibold w-40 rounded-full px-3 py-3 mx-170 mt-3 hover:cursor-pointer tracking-wider">
             More Projects
         </button>
         </a>
+
+        <MarqueeSection />
 </section>
 </div>
   )
