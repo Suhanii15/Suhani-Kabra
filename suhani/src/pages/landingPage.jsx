@@ -323,7 +323,7 @@ I have hands on experience in building real-world projects based on Full Stack, 
 
        
       </section>
-      <section  className="relative min-h-screen px-4 bg-slate-950 bg-[#14141D] md:px-8 py-12 flex flex-col gap-12">
+      <section  className="relative px-4 bg-slate-950 bg-[#14141D] md:px-8 py-6 flex flex-col gap-6">
         <a href="https://github.com/Suhanii15"
          target="_blank"
   rel="noopener noreferrer">
