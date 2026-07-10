@@ -61,8 +61,8 @@ const projectsData=[
         },
     };
   const slideUp = {
-    hidden: { y: 60 },
-    visible: { y: 0, transition: { duration: 1.6, ease: [0.2, 0.65, 0.3, 0.9] } },
+    hidden: { x: -40 },
+    visible: { x: 0, transition: { duration: 0.5, ease: [0.2, 0.65, 0.3, 0.9] } },
   };
 
   const pillHover = {
@@ -140,7 +140,7 @@ const projectsData=[
     animate="visible"
     variants={{
       hidden: {},
-      visible: { transition: { staggerChildren: 0.35, delayChildren: 1.5 } },
+      visible: { transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
     }}
     className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1"
   >
@@ -171,7 +171,7 @@ const projectsData=[
     animate="visible"
     variants={{
       hidden: {},
-      visible: { transition: { staggerChildren: 0.45, delayChildren: 2.5 } },
+      visible: { transition: { staggerChildren: 0.1, delayChildren: 0.6 } },
     }}
     className="flex flex-wrap items-center justify-center gap-x-3"
   >
@@ -218,7 +218,7 @@ const projectsData=[
 <motion.div
   initial={{ opacity: 0, y: 40 }}
   animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, delay: 4, ease: 'easeOut' }}
+  transition={{ duration: 0.6, delay: 1.2, ease: 'easeOut' }}
   className="flex flex-row mt-0 items-center justify-center gap-8"
 >
     <div className="relative inline-block cursor-none"  //hides curosr
