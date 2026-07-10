@@ -22,7 +22,7 @@ import {Flower, Sparkle, SmilePlus} from 'lucide-react'
     const colors=[
         "bg-yellow-400 text-slate-900",
         "bg-pink-300 text-slate-900",
-        "bg-sky-300 text-slate-900",
+        "bg-sky-200 text-slate-900",
     ]
     const icons = [
   <Sparkle size={24} className="text-sky-300" />,

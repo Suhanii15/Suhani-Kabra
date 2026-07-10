@@ -12,6 +12,8 @@ import CodeDetector from '../assets/CodeDetector.png'
 import SmartTravel from '../assets/SmartTravel.png'
 import { useEffect } from 'react'
 import MarqueeSection from '../components/Marquee.jsx'
+import { MoveUpRight } from 'lucide-react';
+
 
 const landingPage = () => {
 const projectsData=[
@@ -263,7 +265,8 @@ I have hands on experience in building real-world projects based on Full Stack, 
 <div className="relative inline-block group">
 <motion.button variants={slideUp}
       whileHover={pillHover}
- className="rounded-full mt-4 font-semibold text-lg shadow-md bg-yellow-400 text-slate-900 px-3 py-2 hover:bg-yellow-300 transition-colors duration-300 cursor-pointer" >
+ className="rounded-full mt-4 font-semibold text-lg shadow-md bg-yellow-400 text-slate-900 px-3 py-2 
+ hover:bg-yellow-300 transition-colors duration-300 cursor-pointer" >
     View Resume
 </motion.button>
  <motion.svg
@@ -320,18 +323,58 @@ I have hands on experience in building real-world projects based on Full Stack, 
 
        
       </section>
-      <section  className="relative h-[300vh] px-4 bg-slate-950 bg-[#14141D] md:px-8 py-12 flex flex-col gap-12">
+      <section  className="relative min-h-screen px-4 bg-slate-950 bg-[#14141D] md:px-8 py-12 flex flex-col gap-12">
         <a href="https://github.com/Suhanii15"
          target="_blank"
   rel="noopener noreferrer">
-       <button className="bg-yellow-400 text-lg font-semibold w-40 rounded-full px-3 py-3 mx-170 mt-3 hover:cursor-pointer tracking-wider">
+       <button className="bg-yellow-400 text-lg font-semibold w-40 rounded-full px-3 py-3 mx-160 mt-3 hover:cursor-pointer tracking-wider">
             More Projects
         </button>
         </a>
 
         <MarqueeSection />
-</section>
-</div>
+
+      </section>
+
+      <footer className="w-full border-t border-zinc-800 bg-[#14141D] px-6 py-10">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-8 md:flex-row md:items-start">
+
+          {/* Lets connect section */}
+          <div className="flex flex-col items-center gap-3 text-center md:items-start md:text-left">
+            <h2 className="text-lg font-semibold text-yellow-300">Have Something in Mind?</h2>
+            <p className="max-w-sm text-sm leading-relaxed text-zinc-400">
+              Always down to talk code, collaborate on open-source projects, or grab a virtual coffee. Drop a message!
+            </p>
+            <button className="cursor-pointer rounded-full bg-yellow-400 px-5 py-2 text-sm font-semibold text-slate-900 shadow-md transition-colors duration-300 hover:bg-yellow-300">
+              Let's Connect
+            </button>
+          </div> 
+
+          {/* Links Section */}
+          <div className="flex flex-col gap-3">
+            <h3 className="text-sm font-semibold tracking-wider text-zinc-500 uppercase">Links</h3>
+            <a href="https://www.linkedin.com/in/suhani-kabra-aab411315/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-2 text-zinc-400 transition-colors hover:text-yellow-300">
+              LinkedIn
+              <MoveUpRight className="opacity-0 transition-opacity group-hover:opacity-100" size={16} />
+            </a>
+            <a href="https://github.com/Suhanii15" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-2 text-zinc-400 transition-colors hover:text-yellow-300">
+              GitHub
+              <MoveUpRight className="opacity-0 transition-opacity group-hover:opacity-100" size={16} />
+            </a>
+            <a href="https://leetcode.com/u/suhanii_15/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-2 text-zinc-400 transition-colors hover:text-yellow-300">
+              LeetCode
+              <MoveUpRight className="opacity-0 transition-opacity group-hover:opacity-100" size={16} />
+            </a>
+          </div>
+
+        </div>
+
+        <div className="mt-8 text-center text-xs text-zinc-600">
+          &copy; {new Date().getFullYear()} Suhani Kabra. All rights reserved.
+        </div>
+      </footer>
+
+    </div>
   )
 }
 
