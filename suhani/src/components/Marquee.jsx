@@ -1,6 +1,6 @@
 import React from 'react'
 import {motion} from 'framer-motion'
-import {Flower, Sparkle,SmilePlus} from 'lucide-react'
+import {Flower, Sparkle, SmilePlus} from 'lucide-react'
 
 
     const row1=[
@@ -17,7 +17,7 @@ import {Flower, Sparkle,SmilePlus} from 'lucide-react'
         "Scalable Software",
         "Building Products",
         "Curious Mind",
-        "Gen AI"
+        "Generative AI"
     ]
     const colors=[
         "bg-yellow-400 text-slate-900",
@@ -25,21 +25,15 @@ import {Flower, Sparkle,SmilePlus} from 'lucide-react'
         "bg-sky-300 text-slate-900",
     ]
     const icons = [
-  <Sparkle size={24} className="text-pink-300" />,
+  <Sparkle size={24} className="text-sky-300" />,
   <Flower size={24} className="text-yellow-300" />,
-  <SmilePlus size={10} fill="#FACC15" className="text-yellow-300" />,
+  <SmilePlus size={24}  className="text-pink-300" />,
 ];
 
 function Pill({text, index}){
     return (
         <motion.div
-            whileHover={{
-
-                scale :1.08,
-                y : -5,
-                rotate : index % 2 == 0 ? -2 : 2, 
-
-            }}
+           
             className={`rounded-full px-3 py-1 text-zinc-900 text-md ${colors[index % colors.length]}`}>
                 {text}
         </motion.div>
@@ -47,36 +41,27 @@ function Pill({text, index}){
 }
 
 function Marquee({items, reverse=false, duration}){
-    const content=[...items,...items];                   //we need copy of the items so that the screen does not remain blank when the starting
-                                                       //three elements disappear or move out of the screen
-
+    const content=[...items,...items];
 
     return (
 <div className="w-full overflow-hidden">
-    <motion.div className="flex w-max items-center gap-10"
-    animate={{ x: reverse ? ["-50%", "0%"] : ["0%", "-50%"] }}
-    transition={{
-        ease: "linear",
-        repeat: Infinity,
-        repeatType: "loop",
-        duration,
-    }}>
-{
-    content.map((item, index)=>(
-        <div key={index} className="flex items-center gap-10">
+    <div
+      className="flex w-max items-center gap-10 marquee-track "
+      style={{
+        animation: `marquee ${duration}s linear infinite`,
+        animationDirection: reverse ? 'reverse' : 'normal',
+      }}
+    >
+{content.map((item, index)=>(
+        <div key={index} className="flex items-center gap-10 group-hover:[animation-play-state:paused]">
            <Pill text={item} index={index} />
           <div>
             {icons[index % icons.length]}
           </div>
-          <div className="rounded-full px-3 py-1 bg-zinc-900 border border-zinc-600">
-            
-          </div>
-
+          <div className="rounded-full px-3 py-1 bg-zinc-900 border border-zinc-600" />
         </div>
-    ))
-}
-    </motion.div>
-
+    ))}
+    </div>
 </div>
     )
 }
@@ -87,7 +72,7 @@ export default function MarqueeSection(){
          <section className="py-20 space-y-8">
       <Marquee
         items={row1}
-        duration={22}
+        duration={28}
       />
 
       <Marquee
