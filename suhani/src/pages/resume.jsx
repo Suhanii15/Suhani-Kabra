@@ -167,9 +167,11 @@ const personal=[
             <p className="max-w-sm text-sm leading-relaxed text-zinc-400">
               Always down to talk code, collaborate on open-source projects, or grab a virtual coffee. Drop a message!
             </p>
+            <a href="mailto:suhanikabra931@gmail.com">
             <button className="cursor-pointer rounded-full bg-yellow-400 px-5 py-2 text-sm font-semibold text-slate-900 shadow-md transition-colors duration-300 hover:bg-yellow-300">
               Let's Connect
             </button>
+            </a>
           </div> 
 
           {/* Links Section */}
