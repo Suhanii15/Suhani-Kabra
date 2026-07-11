@@ -13,7 +13,8 @@ import SmartTravel from '../assets/SmartTravel.png'
 import { useEffect } from 'react'
 import MarqueeSection from '../components/Marquee.jsx'
 import { MoveUpRight } from 'lucide-react';
-
+import Links from '../components/Links.jsx'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 const landingPage = () => {
 const projectsData=[
@@ -49,6 +50,13 @@ const projectsData=[
     }
 ]
 
+ const navigate=useNavigate();
+ const location = useLocation();
+
+  const handleClick = () =>{
+    navigate("/resume");
+  }
+
     //for blocks
     const containerVariants ={
         hidden : {opacity : 0},
@@ -82,6 +90,15 @@ const projectsData=[
 
   const [activeSection, setActiveSection]=useState('home');
   useEffect(()=>{
+    if (location.state?.scrollTo) {
+      const section = document.getElementById(location.state.scrollTo);
+      if (section) {
+        window.setTimeout(() => {
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+
     const sections=document.querySelectorAll('#home, #projects');
 
     const observerOptions={
@@ -104,7 +121,7 @@ const projectsData=[
   sections.forEach((section) => observer.observe(section));
 
   return () => observer.disconnect();
-}, []);
+}, [location.state]);
 
 
   return (
@@ -263,33 +280,14 @@ Hi, I am Suhani Kabra, a software developer and  tech enthusiast. I come up with
 I have hands on experience in building real-world projects based on Full Stack, Generative AI and  Machine Learning.
 </h2>
 <div className="relative inline-block group">
-<motion.button variants={slideUp}
+<motion.button onClick={handleClick}
+ variants={slideUp}
       whileHover={pillHover}
  className="rounded-full mt-4 font-semibold text-lg shadow-md bg-yellow-400 text-slate-900 px-3 py-2 
  hover:bg-yellow-300 transition-colors duration-300 cursor-pointer" >
     View Resume
 </motion.button>
- <motion.svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="#FFD447" /* Matches your yellow button theme */
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        className="absolute -top-1 -right-2 pointer-events-none"
-        // Dynamic Framer Motion Hover Effect
-        animate={{ y: [0, -3, 0] }}
-        transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-        whileHover={{ scale: 1.2, rotate: 12 }}
-      >
-        {/* Left Line */}
-        <line x1="6" y1="18" x2="10" y2="10" />
-        {/* Middle Line */}
-        <line x1="12" y1="18" x2="26" y2="6" />
-        {/* Right Line */}
-        <line x1="18" y1="18" x2="50" y2="10" />
-      </motion.svg>
+ 
 </div>
     </div>    
 
@@ -351,21 +349,7 @@ I have hands on experience in building real-world projects based on Full Stack, 
           </div> 
 
           {/* Links Section */}
-          <div className="flex flex-col gap-3">
-            <h3 className="text-sm font-semibold tracking-wider text-zinc-500 uppercase">Links</h3>
-            <a href="https://www.linkedin.com/in/suhani-kabra-aab411315/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-2 text-zinc-400 transition-colors hover:text-yellow-300">
-              LinkedIn
-              <MoveUpRight className="opacity-0 transition-opacity group-hover:opacity-100" size={16} />
-            </a>
-            <a href="https://github.com/Suhanii15" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-2 text-zinc-400 transition-colors hover:text-yellow-300">
-              GitHub
-              <MoveUpRight className="opacity-0 transition-opacity group-hover:opacity-100" size={16} />
-            </a>
-            <a href="https://leetcode.com/u/suhanii_15/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-2 text-zinc-400 transition-colors hover:text-yellow-300">
-              LeetCode
-              <MoveUpRight className="opacity-0 transition-opacity group-hover:opacity-100" size={16} />
-            </a>
-          </div>
+          <Links />
 
         </div>
 

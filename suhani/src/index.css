@@ -23,3 +23,32 @@ body::-webkit-scrollbar {
 .marquee:hover {
   animation-play-state: paused;
 }
+
+  @keyframes slideIntoPlace {
+    0% {
+      transform: translateX(-100vw); /* Starts completely off-screen to the left */
+      opacity: 0;                    /* Invisible at the start */
+    }
+    100% {
+      transform: translateX(0);      /* Ends perfectly at its natural layout spot */
+      opacity: 1;                    /* Fully visible */
+    }
+  }
+
+  .animate-entrance {
+    animation: slideIntoPlace 2.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+ @keyframes slideIntoPlaceRight {
+    0% {
+      transform: translateX(100vw);  /* Starts completely off-screen to the right */
+      opacity: 0;                    /* Invisible at the start */
+    }
+    100% {
+      transform: translateX(0);      /* Ends perfectly at its natural layout spot */
+      opacity: 1;                    /* Fully visible */
+    }
+  }
+  .animate-entrance-right {
+    animation: slideIntoPlaceRight 2.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
