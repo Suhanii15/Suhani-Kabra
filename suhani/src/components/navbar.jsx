@@ -29,29 +29,33 @@ const Navbar = ({ activeSection }) => {
         <button
           type="button"
           onClick={() => handleNavigateToSection('home')}
-          className={`transition-colors duration-300 ${activeSection === 'home' ? 'text-blue-400' : 'text-blue-300'}`}
+          className={`transition-colors duration-300 hover:cursor-pointer ${activeSection === 'home' ? 'text-blue-400' : 'text-blue-300'}`}
         >
           Home
         </button>
         <button
           type="button"
           onClick={() => handleNavigateToSection('projects')}
-          className={`transition-colors duration-300 ${activeSection === 'projects' ? 'text-blue-400' : 'text-blue-300'}`}
+          className={`transition-colors duration-300 hover:cursor-pointer ${activeSection === 'projects' ? 'text-blue-400' : 'text-blue-300'}`}
         >
           Projects
         </button>
         <button
           type="button"
           onClick={handleResumeClick}
-          className={`transition-colors duration-300 ${activeSection === 'resume' ? 'text-blue-400' : 'text-blue-300'}`}
+          className={`transition-colors duration-300 hover:cursor-pointer ${activeSection === 'resume' ? 'text-blue-400' : 'text-blue-300'}`}
         >
           Resume
         </button>
       </div>
-      <div className="flex flex-row bg-yellow-400 font-bold cursor-pointer text-slate-900 rounded-full px-3 py-1 hover:bg-yellow-300">
+      <button
+        type="button"
+        onClick={() => handleNavigateToSection('contact')}
+        className="flex flex-row bg-yellow-400 font-bold cursor-pointer text-slate-900 rounded-full px-3 py-1 hover:bg-yellow-300"
+      >
         Contact Me
         <Smile className="animate-spin ml-2" />
-      </div>
+      </button>
     </nav>
   )
 }

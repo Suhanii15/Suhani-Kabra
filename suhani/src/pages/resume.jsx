@@ -4,6 +4,10 @@ import { useState} from 'react';
 import { useEffect } from 'react';
 import {motion} from 'framer-motion'
 import Links from '../components/Links'
+import { MoveUp } from 'lucide-react';
+import { MoveDown } from 'lucide-react';
+
+
 
 const resume = () => {
      const [activeSection, setActiveSection]=useState('resume');
@@ -69,6 +73,7 @@ const personal=[
 
         <div className="flex flex-col gap-20 mt-10 ml-20 "> 
     <h1 className="font-bold text-lg bg-yellow-400 text-zinc-900 px-2 rounded-full py-2 px-3 flex items-center justify-center animate-entrance hover:bg-yellow-300  cursor-pointer">CODE</h1>
+    
    <h1 className="font-bold text-lg bg-pink-300 text-zinc-900 px-2 rounded-full py-2 px-3 flex items-center justify-center animate-entrance-right hover:bg-pink-400  cursor-pointer">GROWTH</h1>
     <h1 className="font-bold text-lg bg-sky-300 text-zinc-900 px-2 rounded-full py-2 px-3 flex items-center justify-center animate-entrance hover:bg-sky-200  cursor-pointer">REPEAT</h1>
    </div>
@@ -171,6 +176,9 @@ const personal=[
             <button className="cursor-pointer rounded-full bg-yellow-400 px-5 py-2 text-sm font-semibold text-slate-900 shadow-md transition-colors duration-300 hover:bg-yellow-300">
               Let's Connect
             </button>
+            </a>
+            <a  className="text-sm text-zinc-500 transition-colors hover:text-pink-300 cursor-pointer">
+              +91 85290 12182
             </a>
           </div> 
 

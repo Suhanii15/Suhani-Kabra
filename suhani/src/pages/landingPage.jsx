@@ -334,7 +334,7 @@ I have hands on experience in building real-world projects based on Full Stack, 
 
       </section>
 
-      <footer className="w-full border-t border-zinc-800 bg-[#14141D] px-6 py-10">
+      <footer id="contact" className="w-full border-t border-zinc-800 bg-[#14141D] px-6 py-10">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-8 md:flex-row md:items-start">
 
           {/* Lets connect section */}
@@ -347,6 +347,9 @@ I have hands on experience in building real-world projects based on Full Stack, 
             <button className="cursor-pointer rounded-full bg-yellow-400 px-5 py-2 text-sm font-semibold text-slate-900 shadow-md transition-colors duration-300 hover:bg-yellow-300">
               Let's Connect
             </button>
+            </a>
+            <a  className="text-sm text-zinc-500 transition-colors hover:text-pink-300 cursor-pointer">
+              +91 85290 12182
             </a>
           </div> 
 
