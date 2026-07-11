@@ -4,7 +4,6 @@ import { useState} from 'react';
 import { useEffect } from 'react';
 import {motion} from 'framer-motion'
 import Links from '../components/Links'
-import { MoveUp } from 'lucide-react';
 import { MoveDown } from 'lucide-react';
 
 
@@ -71,11 +70,12 @@ const personal=[
             <div className="w-3/4 min-h-[70vh] bg-zinc-900 mt-10  ml-50
     border border-zinc-600 rounded-[32px] p-8 md:p-12 lg:p-16 flex flex-col md:flex-row  gap-8 md:gap-12 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
 
-        <div className="flex flex-col gap-20 mt-10 ml-20 "> 
-    <h1 className="font-bold text-lg bg-yellow-400 text-zinc-900 px-2 rounded-full py-2 px-3 flex items-center justify-center animate-entrance hover:bg-yellow-300  cursor-pointer">CODE</h1>
-    
-   <h1 className="font-bold text-lg bg-pink-300 text-zinc-900 px-2 rounded-full py-2 px-3 flex items-center justify-center animate-entrance-right hover:bg-pink-400  cursor-pointer">GROWTH</h1>
-    <h1 className="font-bold text-lg bg-sky-300 text-zinc-900 px-2 rounded-full py-2 px-3 flex items-center justify-center animate-entrance hover:bg-sky-200  cursor-pointer">REPEAT</h1>
+        <div className="flex flex-col items-center gap-6 mt-10 ml-20"> 
+    <h1 className="font-bold text-lg bg-yellow-400 text-zinc-900 px-3 rounded-full py-2 min-w-[120px] h-[48px] flex items-center justify-center animate-entrance hover:bg-yellow-300 cursor-pointer">CODE</h1>
+    <MoveDown className="text-zinc-500" size={28} strokeWidth={2.5} />
+   <h1 className="font-bold text-lg bg-pink-300 text-zinc-900 px-3 rounded-full py-2 min-w-[120px] h-[48px] flex items-center justify-center animate-entrance-right hover:bg-pink-400 cursor-pointer">GROWTH</h1>
+    <MoveDown className="text-zinc-500" size={28} strokeWidth={2.5} />
+    <h1 className="font-bold text-lg bg-sky-300 text-zinc-900 px-3 rounded-full py-2 min-w-[120px] h-[48px] flex items-center justify-center animate-entrance hover:bg-sky-200 cursor-pointer">REPEAT</h1>
    </div>
 
    <div className="flex flex-col px-10 mx-20 mt-10" >

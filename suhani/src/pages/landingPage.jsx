@@ -159,7 +159,7 @@ const projectsData=[
       hidden: {},
       visible: { transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
     }}
-    className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1"
+    className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 animate-entrance"
   >
     <div className="overflow-hidden pb-1">
       <motion.span variants={slideUp} className="inline-block text-6xl font-semibold text-white tracking-wider">
@@ -190,7 +190,7 @@ const projectsData=[
       hidden: {},
       visible: { transition: { staggerChildren: 0.1, delayChildren: 0.6 } },
     }}
-    className="flex flex-wrap items-center justify-center gap-x-3"
+    className="flex flex-wrap items-center justify-center gap-x-3 animate-entrance-right"
   >
     <div className="overflow-hidden pb-1">
       <motion.span variants={slideUp} className="inline-block text-6xl font-semibold text-white tracking-wider">
