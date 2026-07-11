@@ -3,6 +3,7 @@ import Navbar from '../components/navbar'
 import { useState} from 'react';
 import { useEffect } from 'react';
 import {motion} from 'framer-motion'
+import Links from '../components/Links'
 
 const resume = () => {
      const [activeSection, setActiveSection]=useState('resume');
@@ -52,6 +53,13 @@ const resume = () => {
     transition: { duration: 0.2 },
   };
 
+  const tech=[
+    "React" , "Express.js", "Fast API", "MongoDB" ,"MySQL", "PostgreSQL", "System Design", "Python", "Scikit-Learn"
+  ]
+const personal=[
+    "Goal Oriented" , "Creative", "Learner", "Problem Solving" ,"Time Management", "Critical Thinking", "Team Collaboration", "Clear Communication", "Adaptability"
+  ]
+
   return (
     <div>
         <section className="min-h-screen bg-slate-950 bg-[#14141D] p-4 pt-24">
@@ -66,17 +74,24 @@ const resume = () => {
    </div>
 
    <div className="flex flex-col px-10 mx-20 mt-10" >
-    <p className="text-white font-md">
+    <motion.p
+      initial={{ opacity: 0, x: -30 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1.6, delay: 0.6, ease: 'easeOut' }}
+      className="text-white font-md"
+    >
       I'm a Computer Science student passionate about building scalable software and meaningful digital experiences.
        I enjoy developing full-stack applications, exploring AI and machine learning, and solving challenging problems through data structures
         and algorithms. Every project I take on is an opportunity to learn, improve, and create technology that delivers real value. With a mindset of continuous
          growth and curiosity,
        I'm always excited to tackle new challenges and build solutions that make an impact.
-    </p>
+    </motion.p>
     <div className="relative inline-block group">
 <motion.button 
  variants={slideUp}
       whileHover={pillHover}
+      animate={{ y: [0, -4, 0] }}
+      transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
  className="rounded-full mt-20 font-semibold text-lg shadow-md bg-yellow-400 text-slate-900 px-3 py-2 
  hover:bg-yellow-300 transition-colors duration-300 cursor-pointer" >
     Download Resume
@@ -88,6 +103,83 @@ const resume = () => {
    </div> 
             
         </section>
+
+        <section  className="min-h-screen bg-slate-950 bg-[#14141D] p-4 pt-24 ">
+          <div className="w-3/4 min-h-[30vh] bg-zinc-900 mt-2  ml-50
+    border border-zinc-600 rounded-[32px] p-8 md:p-12 lg:p-16 flex flex-col md:flex-row  gap-10 md:gap-12 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+<button className="tracking-wider text-zinc-900 rounded-full h-10 px-3 py-2 bg-sky-200 font-semibold text-lg">
+  EDUCATION
+</button>
+<div calssName="flex flex-col gap-3">
+<h1 className="text-white font-bold text-2xl tracking-wider ">B.Tech in Computer Science And Engineering</h1>
+<h3 className="text-white font-semibold text-1xl tracking-wider mt-2">Indian Institute Of Information Technology, Vadodara</h3>
+<button className="tracking-wider text-zinc-900 rounded-full h-10 px-2 py-2 bg-pink-300 font-semibold text-lg mt-4">
+  Batch 2024-2028
+</button>
+</div>
+
+
+
+</div>
+
+<div className="flex flex-row m-4 pt-14 gap-3 ml-9">
+  <div className="w-3/4 min-h-[50vh] bg-zinc-900 mt-2  
+    border border-zinc-600 rounded-[32px] p-8 md:p-12 lg:p-16 flex flex-col md:flex-col  gap-10 md:gap-12 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+<button className="tracking-wider text-zinc-900 rounded-full h-10 px-3 w-1/2 py-2 bg-sky-200 font-semibold text-lg">
+  TECHNICAL SKILLS
+</button>
+ <div class="flex flex-wrap gap-3  p-6">
+      {tech.map((tool) => (
+        <button key={tool} class="rounded-full border border-zinc-800  px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-neutral-800 hover:border-neutral-700">
+          {tool}
+        </button>
+      ))}
+    </div>
+  </div>
+
+  <div className="w-3/4 min-h-[50vh] bg-zinc-900 mt-2  
+    border border-zinc-600 rounded-[32px] p-8 md:p-12 lg:p-16 flex flex-col md:flex-col  gap-10 md:gap-12 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+<button className="tracking-wider text-zinc-900 rounded-full h-10 px-3 w-1/2 py-2 bg-sky-200 font-semibold text-lg">
+  PERSONAL SKILLS
+</button>
+ <div class="flex flex-wrap gap-3  p-6">
+      {personal.map((tool) => (
+        <button key={tool} class="rounded-full border border-zinc-800  px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-neutral-800 hover:border-neutral-700">
+          {tool}
+        </button>
+      ))}
+    </div>
+  </div>
+   
+
+  </div>
+ 
+
+        </section>
+
+        <footer className="w-full border-t border-zinc-800 bg-[#14141D] px-6 py-10">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-8 md:flex-row md:items-start">
+
+          {/* Lets connect section */}
+          <div className="flex flex-col items-center gap-3 text-center md:items-start md:text-left">
+            <h2 className="text-lg font-semibold text-yellow-300">Have Something in Mind?</h2>
+            <p className="max-w-sm text-sm leading-relaxed text-zinc-400">
+              Always down to talk code, collaborate on open-source projects, or grab a virtual coffee. Drop a message!
+            </p>
+            <button className="cursor-pointer rounded-full bg-yellow-400 px-5 py-2 text-sm font-semibold text-slate-900 shadow-md transition-colors duration-300 hover:bg-yellow-300">
+              Let's Connect
+            </button>
+          </div> 
+
+          {/* Links Section */}
+          <Links />
+
+        </div>
+
+        <div className="mt-8 text-center text-xs text-zinc-600">
+          &copy; {new Date().getFullYear()} Suhani Kabra. All rights reserved.
+        </div>
+      </footer>
     </div>
   )
 }
