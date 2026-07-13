@@ -231,7 +231,7 @@ const projectsData=[
         <img 
         src={profileImg}
         alt="Suhani Kabra" 
-        className="w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] object-cover rounded-full" 
+        className="w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] lg:w-[300px] lg:h-[300px] object-cover rounded-full" 
         />
 
         {isHovered && (
