@@ -162,7 +162,7 @@ const projectsData=[
     className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 animate-entrance"
   >
     <div className="overflow-hidden pb-1">
-      <motion.span variants={slideUp} className="inline-block text-6xl font-semibold text-white tracking-wider">
+      <motion.span variants={slideUp} className="inline-block text-5xl font-semibold text-white tracking-wider">
         Building
       </motion.span>
     </div>
@@ -170,13 +170,13 @@ const projectsData=[
       <motion.span
         variants={slideUp}
         whileHover={pillHover}
-        className="inline-block bg-pink-400 text-slate-900 rounded-full px-3 py-1 text-6xl font-semibold"
+        className="inline-block bg-pink-400 text-slate-900 rounded-full px-3 py-1 text-5xl font-semibold"
       >
         Scalable Software
       </motion.span>
     </div>
     <div className="overflow-hidden pb-1">
-      <motion.span variants={slideUp} className="inline-block text-6xl font-semibold text-white tracking-wider">
+      <motion.span variants={slideUp} className="inline-block text-5xl font-semibold text-white tracking-wider">
         &
       </motion.span>
     </div>
@@ -193,14 +193,14 @@ const projectsData=[
     className="flex flex-wrap items-center justify-center gap-x-3 animate-entrance-right"
   >
     <div className="overflow-hidden pb-1">
-      <motion.span variants={slideUp} className="inline-block text-6xl font-semibold text-white tracking-wider">
+      <motion.span variants={slideUp} className="inline-block text-5xl font-semibold text-white tracking-wider">
         Interactive Digital
       </motion.span>
     </div>
     <motion.span
       variants={slideUp}
       whileHover={pillHover}
-      className="relative inline-block px-4 py-4 border border-zinc-700 bg-zinc-900 backdrop-blur-xs text-yellow-300 text-6xl font-semibold"
+      className="relative inline-block px-4 py-4 border border-zinc-700 bg-zinc-900 backdrop-blur-xs text-yellow-300 text-5xl font-semibold"
     >
       <div className="overflow-hidden pb-1">
         <motion.span variants={slideUp} className="inline-block">

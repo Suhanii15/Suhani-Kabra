@@ -83,10 +83,10 @@ const personal=[
       initial={{ opacity: 0, x: -30 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 1.6, delay: 0.6, ease: 'easeOut' }}
-      className="text-white font-md leading-relaxed"
+      className="text-white text-xl leading-relaxed"
     >
       I'm a Computer Science student passionate about building <span className="font-bold">scalable software</span> and meaningful digital experiences.
-       I enjoy developing <span className="font-bold">Full Stack applications</span>, exploring <span className="font-bold">AI</span> and <span className="font-bold">ML</span>, and solving challenging problems through <span className="font-bold">Data structures</span>
+       I enjoy developing <span className="font-bold">Full Stack applications</span>, exploring <span className="font-bold">AI</span> and <span className="font-bold">ML</span>, and solving challenging problems through <span className="font-bold">Data structures </span>
         and <span className="font-bold">Algorithms</span>. Every project I take on is an opportunity to learn, improve, and create technology that delivers real value. With a mindset of continuous
          growth and curiosity,
        I'm always excited to tackle new challenges and build solutions that make an impact.
@@ -95,10 +95,15 @@ const personal=[
       <a href="https://drive.google.com/file/d/1JT2cPfiJ93zyx6zd6mpsfz4f9hkfM2vk/view?usp=sharing">
 <motion.button 
  variants={slideUp}
-      whileHover={pillHover}
-      animate={{ y: [0, -4, 0] }}
-      transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
- className="rounded-full mt-10 font-semibold text-lg shadow-md bg-yellow-400 text-slate-900 px-3 py-2 
+      whileHover={{
+        scale: 1.06,
+        y: -2,
+        boxShadow: '0 0 0 1px rgba(250,204,21,0.3), 0 10px 25px rgba(250,204,21,0.25)',
+        transition: { duration: 0.2 }
+      }}
+      animate={{ y: [0, -5, 0], rotate: [0, 1, -1, 0] }}
+      transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
+ className="rounded-full mt-10 font-semibold text-lg shadow-md bg-yellow-400 text-slate-900 px-4 py-2.5 
  hover:bg-yellow-300 transition-colors duration-300 cursor-pointer" >
     Download Resume
 </motion.button>
@@ -110,18 +115,19 @@ const personal=[
             
         </section>
 
-        <section  className="min-h-[60vh] bg-slate-950 bg-[#14141D] p-4 pt-8 pb-8 ">
+        <section  className="min-h-[50vh] bg-slate-950 bg-[#14141D] p-4 pt-8 pb-8 ">
           <div className="w-3/4 min-h-[30vh] bg-zinc-900 mt-2  ml-50
     border border-zinc-600 rounded-[32px] p-8 md:p-12 lg:p-16 flex flex-col md:flex-row  gap-10 md:gap-12 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-<button className="tracking-wider text-zinc-900 rounded-full h-10 px-3 py-2 bg-sky-200 font-semibold text-lg">
+<button className="tracking-wider text-zinc-900 rounded-full h-10 px-3 py-2 bg-sky-200 font-semibold text-lg mt-5">
   EDUCATION
 </button>
 <div calssName="flex flex-col gap-3">
-<h1 className="text-white font-bold text-2xl tracking-wider ">B.Tech in Computer Science And Engineering</h1>
-<h3 className="text-white font-semibold text-1xl tracking-wider mt-2">Indian Institute Of Information Technology, Vadodara</h3>
-<button className="tracking-wider text-zinc-900 rounded-full h-10 px-2 py-2 bg-pink-300 font-semibold text-lg mt-4">
+<h1 className="text-white font-bold text-2xl tracking-wider mt-4">Indian Institute Of Information Technology, Vadodara</h1>
+<h3 className="text-white font-semibold text-1xl tracking-wider mt-4">B.Tech in Computer Science And Engineering
+<span className="tracking-wider text-zinc-900 rounded-full h-10 px-2 py-1 bg-pink-300 font-semibold text-lg mx-2">
   Batch 2024-2028
-</button>
+</span>
+</h3>
 </div>
 
 
