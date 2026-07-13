@@ -23,9 +23,9 @@ const Navbar = ({ activeSection }) => {
   };
 
   return (
-    <nav className="flex items-center justify-between rounded-3xl fixed top-0 left-0 right-0 z-50 mx-20 my-5 bg-slate-900 px-6 py-4 text-white shadow-md">
-      <div className="text-3xl font-signature text-yellow-300 tracking-widest">Suhani</div>
-      <div className="flex gap-8">
+    <nav className="flex items-center justify-between rounded-2xl fixed top-0 left-0 right-0 z-50 mx-auto my-3 w-[92%] max-w-4xl bg-slate-900 px-4 py-2.5 text-white shadow-md sm:px-5 sm:py-3">
+      <div className="text-2xl font-signature text-yellow-300 tracking-widest sm:text-2xl">Suhani</div>
+      <div className="flex gap-3 text-sm sm:gap-5 sm:text-base">
         <button
           type="button"
           onClick={() => handleNavigateToSection('home')}
@@ -51,7 +51,7 @@ const Navbar = ({ activeSection }) => {
       <button
         type="button"
         onClick={() => handleNavigateToSection('contact')}
-        className="flex flex-row bg-yellow-400 font-bold cursor-pointer text-slate-900 rounded-full px-3 py-1 hover:bg-yellow-300 group"
+        className="flex flex-row items-center bg-yellow-400 font-semibold cursor-pointer text-slate-900 rounded-full px-2.5 py-1 text-sm hover:bg-yellow-300 group sm:px-3"
       >
         Contact Me
         <Smile className="ml-2 transition-transform duration-300 group-hover:translate-y-[-2px] group-hover:scale-110" />
