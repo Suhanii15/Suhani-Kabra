@@ -67,10 +67,10 @@ const personal=[
     <div>
         <section className="min-h-[80vh] bg-slate-950 bg-[#14141D] p-4 pt-24 pb-8">
 <Navbar activeSection={activeSection} /> 
-            <div className="w-3/4 min-h-[58vh] bg-zinc-900 mt-8 ml-50
+            <div className="w-[92%] md:w-3/4 min-h-[58vh] bg-zinc-900 mt-8 mx-auto lg:ml-50
     border border-zinc-600 rounded-[32px] p-8 md:p-10 lg:p-12 flex flex-col md:flex-row gap-6 md:gap-8 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
 
-        <div className="flex flex-col items-center gap-6 mt-10 ml-20"> 
+        <div className="flex flex-col items-center gap-6 mt-10 lg:ml-20"> 
     <h1 className="font-bold text-lg bg-yellow-400 text-zinc-900 px-3 rounded-full py-2 min-w-[120px] h-[48px] flex items-center justify-center animate-entrance hover:bg-yellow-300 cursor-pointer">CODE</h1>
     <MoveDown className="text-zinc-500" size={28} strokeWidth={2.5} />
    <h1 className="font-bold text-lg bg-pink-300 text-zinc-900 px-3 rounded-full py-2 min-w-[120px] h-[48px] flex items-center justify-center animate-entrance-right hover:bg-pink-400 cursor-pointer">GROWTH</h1>
@@ -78,18 +78,18 @@ const personal=[
     <h1 className="font-bold text-lg bg-sky-300 text-zinc-900 px-3 rounded-full py-2 min-w-[120px] h-[48px] flex items-center justify-center animate-entrance hover:bg-sky-200 cursor-pointer">REPEAT</h1>
    </div>
 
-   <div className="flex flex-col px-10 mx-20" >
+   <div className="flex flex-col px-4 md:px-10 mx-4 lg:mx-20" >
     <motion.p
       initial={{ opacity: 0, x: -30 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 1.6, delay: 0.6, ease: 'easeOut' }}
-      className="text-white text-xl leading-relaxed mt-6"
+      className="text-white text-base md:text-xl leading-relaxed mt-6"
     >
        Computer Science student passionate about building <span className="font-bold">Full Stack applications</span>, exploring <span className="font-bold">AI</span> and <span className="font-bold">ML</span>, and solving challenging problems through <span className="font-bold">Data structures </span>
         and <span className="font-bold">Algorithms</span>. 
        I'm always excited to tackle new challenges and build solutions that make an impact.
     </motion.p>
-    <div className="relative inline-block group mt-10fwq  q q ,M NBVBC ">
+    <div className="relative inline-block group mt-10">
       <a href="https://drive.google.com/file/d/1JT2cPfiJ93zyx6zd6mpsfz4f9hkfM2vk/view?usp=sharing">
 <motion.button 
  variants={slideUp}
@@ -114,15 +114,15 @@ const personal=[
         </section>
 
         <section  className="min-h-[50vh] bg-slate-950 bg-[#14141D] p-4 pt-8 pb-8 ">
-          <div className="w-3/4 min-h-[30vh] bg-zinc-900 mt-2  ml-50
+          <div className="w-[92%] md:w-3/4 min-h-[30vh] bg-zinc-900 mt-2 mx-auto lg:ml-50
     border border-zinc-600 rounded-[32px] p-8 md:p-12 lg:p-16 flex flex-col md:flex-row  gap-10 md:gap-12 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
 <button className="tracking-wider text-zinc-900 rounded-full h-10 px-3 py-2 bg-sky-200 font-semibold text-lg mt-5">
   EDUCATION
 </button>
 <div calssName="flex flex-col gap-3">
-<h1 className="text-white font-bold text-2xl tracking-wider mt-4">Indian Institute Of Information Technology, Vadodara</h1>
-<h3 className="text-white font-semibold text-1xl tracking-wider mt-4">B.Tech in Computer Science And Engineering
-<span className="tracking-wider text-zinc-900 rounded-full h-10 px-2 py-1 bg-pink-300 font-semibold text-lg mx-2">
+<h1 className="text-white font-bold text-xl md:text-2xl tracking-wider mt-4">Indian Institute Of Information Technology, Vadodara</h1>
+<h3 className="text-white font-semibold text-base md:text-xl tracking-wider mt-4">B.Tech in Computer Science And Engineering
+<span className="whitespace-nowrap tracking-wider text-zinc-900 rounded-full h-10 px-2 py-1 bg-pink-300 font-semibold text-lg mx-2">
   Batch 2024-2028
 </span>
 </h3>
@@ -132,29 +132,29 @@ const personal=[
 
 </div>
 
-<div className="flex flex-row m-4 pt-8 gap-3 ml-9">
-  <div className="w-3/4 min-h-[50vh] bg-zinc-900 mt-2  
-    border border-zinc-600 rounded-[32px] p-8 md:p-12 lg:p-16 flex flex-col md:flex-col  gap-10 md:gap-12 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-<button className="tracking-wider text-zinc-900 rounded-full h-10 px-3 w-1/2 py-2 bg-sky-200 font-semibold text-lg">
+<div className="flex flex-col md:flex-row m-0 md:m-4 pt-8 gap-3 lg:ml-9">
+  <div className="w-full md:w-3/4 min-h-[50vh] bg-zinc-900 mt-2  
+    border border-zinc-600 rounded-[32px] p-6 md:p-12 lg:p-16 flex flex-col md:flex-col  gap-6 md:gap-10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+<button className="tracking-wider text-zinc-900 rounded-full h-10 px-3 w-auto md:w-1/2 py-2 bg-sky-200 font-semibold text-base md:text-lg">
   TECHNICAL SKILLS
 </button>
- <div class="flex flex-wrap gap-3  p-6">
+ <div class="flex flex-wrap gap-3 p-4 md:p-6">
       {tech.map((tool) => (
-        <button key={tool} class="rounded-full border border-zinc-800  px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-neutral-800 hover:border-neutral-700">
+        <button key={tool} class="rounded-full border border-zinc-800  px-4 md:px-6 py-2 md:py-3 text-sm font-semibold text-white transition-all hover:bg-neutral-800 hover:border-neutral-700">
           {tool}
         </button>
       ))}
     </div>
   </div>
 
-  <div className="w-3/4 min-h-[50vh] bg-zinc-900 mt-2  
-    border border-zinc-600 rounded-[32px] p-8 md:p-12 lg:p-16 flex flex-col md:flex-col  gap-10 md:gap-12 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-<button className="tracking-wider text-zinc-900 rounded-full h-10 px-3 w-1/2 py-2 bg-sky-200 font-semibold text-lg">
+  <div className="w-full md:w-3/4 min-h-[50vh] bg-zinc-900 mt-2  
+    border border-zinc-600 rounded-[32px] p-6 md:p-12 lg:p-16 flex flex-col md:flex-col  gap-6 md:gap-10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+<button className="tracking-wider text-zinc-900 rounded-full h-10 px-3 w-auto md:w-1/2 py-2 bg-sky-200 font-semibold text-base md:text-lg">
   PERSONAL SKILLS
 </button>
- <div class="flex flex-wrap gap-3  p-6">
+ <div class="flex flex-wrap gap-3 p-4 md:p-6">
       {personal.map((tool) => (
-        <button key={tool} class="rounded-full border border-zinc-800  px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-neutral-800 hover:border-neutral-700">
+        <button key={tool} class="rounded-full border border-zinc-800  px-4 md:px-6 py-2 md:py-3 text-sm font-semibold text-white transition-all hover:bg-neutral-800 hover:border-neutral-700">
           {tool}
         </button>
       ))}
