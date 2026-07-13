@@ -65,10 +65,10 @@ const personal=[
 
   return (
     <div>
-        <section className="min-h-screen bg-slate-950 bg-[#14141D] p-4 pt-24">
+        <section className="min-h-[80vh] bg-slate-950 bg-[#14141D] p-4 pt-24 pb-8">
 <Navbar activeSection={activeSection} /> 
-            <div className="w-3/4 min-h-[70vh] bg-zinc-900 mt-10  ml-50
-    border border-zinc-600 rounded-[32px] p-8 md:p-12 lg:p-16 flex flex-col md:flex-row  gap-8 md:gap-12 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+            <div className="w-3/4 min-h-[58vh] bg-zinc-900 mt-8 ml-50
+    border border-zinc-600 rounded-[32px] p-8 md:p-10 lg:p-12 flex flex-col md:flex-row gap-6 md:gap-8 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
 
         <div className="flex flex-col items-center gap-6 mt-10 ml-20"> 
     <h1 className="font-bold text-lg bg-yellow-400 text-zinc-900 px-3 rounded-full py-2 min-w-[120px] h-[48px] flex items-center justify-center animate-entrance hover:bg-yellow-300 cursor-pointer">CODE</h1>
@@ -78,16 +78,16 @@ const personal=[
     <h1 className="font-bold text-lg bg-sky-300 text-zinc-900 px-3 rounded-full py-2 min-w-[120px] h-[48px] flex items-center justify-center animate-entrance hover:bg-sky-200 cursor-pointer">REPEAT</h1>
    </div>
 
-   <div className="flex flex-col px-10 mx-20 mt-10" >
+   <div className="flex flex-col px-10 mx-20" >
     <motion.p
       initial={{ opacity: 0, x: -30 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 1.6, delay: 0.6, ease: 'easeOut' }}
-      className="text-white font-md"
+      className="text-white font-md leading-relaxed"
     >
-      I'm a Computer Science student passionate about building scalable software and meaningful digital experiences.
-       I enjoy developing full-stack applications, exploring AI and machine learning, and solving challenging problems through data structures
-        and algorithms. Every project I take on is an opportunity to learn, improve, and create technology that delivers real value. With a mindset of continuous
+      I'm a Computer Science student passionate about building <span className="font-bold">scalable software</span> and meaningful digital experiences.
+       I enjoy developing <span className="font-bold">full-stack applications</span>, exploring <span className="font-bold">AI</span> and <span className="font-bold">machine learning</span>, and solving challenging problems through <span className="font-bold">data structures</span>
+        and <span className="font-bold">algorithms</span>. Every project I take on is an opportunity to learn, improve, and create technology that delivers real value. With a mindset of continuous
          growth and curiosity,
        I'm always excited to tackle new challenges and build solutions that make an impact.
     </motion.p>
@@ -98,7 +98,7 @@ const personal=[
       whileHover={pillHover}
       animate={{ y: [0, -4, 0] }}
       transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
- className="rounded-full mt-20 font-semibold text-lg shadow-md bg-yellow-400 text-slate-900 px-3 py-2 
+ className="rounded-full mt-10 font-semibold text-lg shadow-md bg-yellow-400 text-slate-900 px-3 py-2 
  hover:bg-yellow-300 transition-colors duration-300 cursor-pointer" >
     Download Resume
 </motion.button>
@@ -110,7 +110,7 @@ const personal=[
             
         </section>
 
-        <section  className="min-h-screen bg-slate-950 bg-[#14141D] p-4 pt-24 ">
+        <section  className="min-h-[60vh] bg-slate-950 bg-[#14141D] p-4 pt-8 pb-8 ">
           <div className="w-3/4 min-h-[30vh] bg-zinc-900 mt-2  ml-50
     border border-zinc-600 rounded-[32px] p-8 md:p-12 lg:p-16 flex flex-col md:flex-row  gap-10 md:gap-12 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
 <button className="tracking-wider text-zinc-900 rounded-full h-10 px-3 py-2 bg-sky-200 font-semibold text-lg">
@@ -128,7 +128,7 @@ const personal=[
 
 </div>
 
-<div className="flex flex-row m-4 pt-14 gap-3 ml-9">
+<div className="flex flex-row m-4 pt-8 gap-3 ml-9">
   <div className="w-3/4 min-h-[50vh] bg-zinc-900 mt-2  
     border border-zinc-600 rounded-[32px] p-8 md:p-12 lg:p-16 flex flex-col md:flex-col  gap-10 md:gap-12 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
 <button className="tracking-wider text-zinc-900 rounded-full h-10 px-3 w-1/2 py-2 bg-sky-200 font-semibold text-lg">
@@ -177,9 +177,7 @@ const personal=[
               Let's Connect
             </button>
             </a>
-            <a  className="text-sm text-zinc-500 transition-colors hover:text-pink-300 cursor-pointer">
-              +91 85290 12182
-            </a>
+           
           </div> 
 
           {/* Links Section */}

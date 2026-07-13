@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../components/navbar.jsx'
-import profileImg from '../assets/Photo.jpeg'
+import profileImg from '../assets/Profile.jpeg'
 import {motion } from 'framer-motion'
 import Badges from '../components/Badges.jsx'
 import { Coffee } from 'lucide-react';
@@ -127,7 +127,7 @@ const projectsData=[
   return (
     <div className="scroll-smooth">
     <section id="home"
-     className="min-h-screen bg-slate-950 bg-[#14141D] p-4 pt-24">
+     className="min-h-[90vh] bg-slate-950 bg-[#14141D] p-4 pt-16 pb-8">
         {/* Background Pattern */}
         <div 
         className="absolute inset-0 h-full w-full bg-[linear-gradient(to_right,#80808025_1px,transparent_1px),linear-gradient(to_bottom,#80808025_1px,transparent_1px)] bg-[size:60px_60px]" 
@@ -136,7 +136,7 @@ const projectsData=[
 
  <Navbar activeSection={activeSection} />
  {/* Main Content */}
-      <div className="relative z-10 text-center mt-10">
+      <div className="relative z-10 text-center mt-4">
 
         <motion.div 
   animate={{ y: [0, -8, 0] }}
@@ -150,7 +150,7 @@ const projectsData=[
 
 
 {/* headings - block-by-block slide up */}
-<div className="flex flex-col items-center justify-center gap-2">
+<div className="mt-8 flex flex-col items-center justify-center gap-2">
   {/* First line: Building + Scalable Software + & */}
   <motion.div
     initial="hidden"
@@ -246,7 +246,7 @@ const projectsData=[
         <img 
         src={profileImg}
         alt="Suhani Kabra" 
-        className="w-[300px] h-[400px]  object-cover rounded-[50%_50%_60%_50%_/_40%_40%_60%_60%] sm:rounded-[60%_40%_40%_80%_/_60%_40%_80%_50%]" 
+        className="w-[300px] h-[300px] object-cover rounded-full" 
         />
 
         {isHovered && (
@@ -275,9 +275,9 @@ const projectsData=[
     </div>
 
     <div className="flex flex-col items-start gap-4 max-w-xl">
-<h2 className="text-white text-left">
-Hi, I am Suhani Kabra, a software developer and  tech enthusiast. I come up with strong problem solving skills in DSA and Competitive Programming.
-I have hands on experience in building real-world projects based on Full Stack, Generative AI and  Machine Learning.
+<h2 className="text-white text-left leading-relaxed">
+Hi, I am Suhani Kabra, a <span className="font-bold">Software Developer</span> and <span className="font-bold">Tech enthusiast</span>. I come up with strong problem solving skills in <span className="font-bold">DSA</span> and <span className="font-bold">Competitive Programming</span>.
+I have hands on experience in building real-world projects based on <span className="font-bold">Full Stack</span>, <span className="font-bold">Gen AI</span> and <span className="font-bold">Machine Learning</span>.
 </h2>
 <div className="relative inline-block group">
 <motion.button onClick={handleClick}
@@ -303,7 +303,7 @@ I have hands on experience in building real-world projects based on Full Stack, 
   onClick={()=>document.getElementById("projects")?.scrollIntoView({behavior : "smooth"})}>
     
     <Badges 
-     className="mt-0 mx-auto mr-0 hover:cursor-pointer" />
+     className="-mt-4 md:-mt-6 mx-auto mr-0 hover:cursor-pointer" />
     
 </motion.div>
 
@@ -314,7 +314,7 @@ I have hands on experience in building real-world projects based on Full Stack, 
     {/* marks the ending of first section of our landing page*/}
 
      <section id="projects"
-     className="relative h-[300vh] px-4 bg-slate-950 bg-[#14141D] md:px-8 py-12 flex flex-col gap-12">
+     className="relative min-h-[80vh] -mt-4 px-4 bg-slate-950 bg-[#14141D] md:px-8 pt-2 pb-6 flex flex-col gap-8">
         {projectsData.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
@@ -347,9 +347,6 @@ I have hands on experience in building real-world projects based on Full Stack, 
             <button className="cursor-pointer rounded-full bg-yellow-400 px-5 py-2 text-sm font-semibold text-slate-900 shadow-md transition-colors duration-300 hover:bg-yellow-300">
               Let's Connect
             </button>
-            </a>
-            <a  className="text-sm text-zinc-500 transition-colors hover:text-pink-300 cursor-pointer">
-              +91 85290 12182
             </a>
           </div> 
 
