@@ -83,15 +83,13 @@ const personal=[
       initial={{ opacity: 0, x: -30 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 1.6, delay: 0.6, ease: 'easeOut' }}
-      className="text-white text-xl leading-relaxed"
+      className="text-white text-xl leading-relaxed mt-6"
     >
-      I'm a Computer Science student passionate about building <span className="font-bold">scalable software</span> and meaningful digital experiences.
-       I enjoy developing <span className="font-bold">Full Stack applications</span>, exploring <span className="font-bold">AI</span> and <span className="font-bold">ML</span>, and solving challenging problems through <span className="font-bold">Data structures </span>
-        and <span className="font-bold">Algorithms</span>. Every project I take on is an opportunity to learn, improve, and create technology that delivers real value. With a mindset of continuous
-         growth and curiosity,
+       Computer Science student passionate about building <span className="font-bold">Full Stack applications</span>, exploring <span className="font-bold">AI</span> and <span className="font-bold">ML</span>, and solving challenging problems through <span className="font-bold">Data structures </span>
+        and <span className="font-bold">Algorithms</span>. 
        I'm always excited to tackle new challenges and build solutions that make an impact.
     </motion.p>
-    <div className="relative inline-block group">
+    <div className="relative inline-block group mt-10fwq  q q ,M NBVBC ">
       <a href="https://drive.google.com/file/d/1JT2cPfiJ93zyx6zd6mpsfz4f9hkfM2vk/view?usp=sharing">
 <motion.button 
  variants={slideUp}
