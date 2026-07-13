@@ -86,13 +86,13 @@ const personal=[
       className="text-white font-md leading-relaxed"
     >
       I'm a Computer Science student passionate about building <span className="font-bold">scalable software</span> and meaningful digital experiences.
-       I enjoy developing <span className="font-bold">full-stack applications</span>, exploring <span className="font-bold">AI</span> and <span className="font-bold">machine learning</span>, and solving challenging problems through <span className="font-bold">data structures</span>
-        and <span className="font-bold">algorithms</span>. Every project I take on is an opportunity to learn, improve, and create technology that delivers real value. With a mindset of continuous
+       I enjoy developing <span className="font-bold">Full Stack applications</span>, exploring <span className="font-bold">AI</span> and <span className="font-bold">ML</span>, and solving challenging problems through <span className="font-bold">Data structures</span>
+        and <span className="font-bold">Algorithms</span>. Every project I take on is an opportunity to learn, improve, and create technology that delivers real value. With a mindset of continuous
          growth and curiosity,
        I'm always excited to tackle new challenges and build solutions that make an impact.
     </motion.p>
     <div className="relative inline-block group">
-      <a href="https://drive.google.com/file/d/1JT2cPfiJ93zyx6zd6mpsfz4f9hkfM2vk/view?usp=drive_link">
+      <a href="https://drive.google.com/file/d/1JT2cPfiJ93zyx6zd6mpsfz4f9hkfM2vk/view?usp=sharing">
 <motion.button 
  variants={slideUp}
       whileHover={pillHover}
