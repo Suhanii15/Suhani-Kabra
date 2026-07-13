@@ -309,7 +309,7 @@ I have hands on experience in building real-world projects based on <span classN
       <section  className="relative px-4 bg-slate-950 bg-[#14141D] md:px-8 py-6 flex flex-col gap-6">
         <a href="https://github.com/Suhanii15"
          target="_blank"
-  rel="noopener noreferrer">
+         rel="noopener noreferrer">
        <button className="bg-yellow-400 text-lg font-semibold w-40 rounded-full px-3 py-3 mx-auto 2xl:mx-160 mt-3 hover:cursor-pointer tracking-wider">
             More Projects
         </button>

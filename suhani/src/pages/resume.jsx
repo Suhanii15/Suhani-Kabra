@@ -90,7 +90,7 @@ const personal=[
        I'm always excited to tackle new challenges and build solutions that make an impact.
     </motion.p>
     <div className="relative inline-block group mt-10">
-      <a href="https://drive.google.com/file/d/1JT2cPfiJ93zyx6zd6mpsfz4f9hkfM2vk/view?usp=sharing">
+      <a href="https://drive.google.com/file/d/1JT2cPfiJ93zyx6zd6mpsfz4f9hkfM2vk/view?usp=sharing" target="_blank" rel="noopener noreferrer">
 <motion.button 
  variants={slideUp}
       whileHover={{
