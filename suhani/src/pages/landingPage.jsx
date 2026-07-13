@@ -310,7 +310,7 @@ I have hands on experience in building real-world projects based on <span classN
         <a href="https://github.com/Suhanii15"
          target="_blank"
   rel="noopener noreferrer">
-       <button className="bg-yellow-400 text-lg font-semibold w-40 rounded-full px-3 py-3 mx-auto sm:mx-160 mt-3 hover:cursor-pointer tracking-wider">
+       <button className="bg-yellow-400 text-lg font-semibold w-40 rounded-full px-3 py-3 mx-auto 2xl:mx-160 mt-3 hover:cursor-pointer tracking-wider">
             More Projects
         </button>
         </a>
