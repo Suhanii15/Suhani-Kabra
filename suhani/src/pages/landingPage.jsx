@@ -138,14 +138,7 @@ const projectsData=[
  {/* Main Content */}
       <div className="relative z-10 text-center mt-4">
 
-        <motion.div 
-  animate={{ y: [0, -8, 0] }}
-  transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-  className="hidden xl:block absolute left-12 top-1/3 bg-zinc-900 border border-zinc-800 text-sm text-zinc-300 px-4 py-2 rounded-xl shadow-xl -rotate-6"
->
-  <Coffee  className="inline-block mr-2" />
-  Fueled by Coffee & Design
-</motion.div>
+
 
 
 
@@ -162,7 +155,7 @@ const projectsData=[
     className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 animate-entrance"
   >
     <div className="overflow-hidden pb-1">
-      <motion.span variants={slideUp} className="inline-block text-5xl font-semibold text-white tracking-wider">
+      <motion.span variants={slideUp} className="inline-block text-3xl sm:text-4xl md:text-5xl font-semibold text-white tracking-wider">
         Building
       </motion.span>
     </div>
@@ -170,13 +163,13 @@ const projectsData=[
       <motion.span
         variants={slideUp}
         whileHover={pillHover}
-        className="inline-block bg-pink-400 text-slate-900 rounded-full px-3 py-1 text-5xl font-semibold"
+        className="inline-block bg-pink-400 text-slate-900 rounded-full px-3 py-1 text-3xl sm:text-4xl md:text-5xl font-semibold"
       >
         Scalable Software
       </motion.span>
     </div>
     <div className="overflow-hidden pb-1">
-      <motion.span variants={slideUp} className="inline-block text-5xl font-semibold text-white tracking-wider">
+      <motion.span variants={slideUp} className="inline-block text-3xl sm:text-4xl md:text-5xl font-semibold text-white tracking-wider">
         &
       </motion.span>
     </div>
@@ -193,14 +186,14 @@ const projectsData=[
     className="flex flex-wrap items-center justify-center gap-x-3 animate-entrance-right"
   >
     <div className="overflow-hidden pb-1">
-      <motion.span variants={slideUp} className="inline-block text-5xl font-semibold text-white tracking-wider">
+      <motion.span variants={slideUp} className="inline-block text-3xl sm:text-4xl md:text-5xl font-semibold text-white tracking-wider">
         Interactive Digital
       </motion.span>
     </div>
     <motion.span
       variants={slideUp}
       whileHover={pillHover}
-      className="relative inline-block px-4 py-4 border border-zinc-700 bg-zinc-900 backdrop-blur-xs text-yellow-300 text-5xl font-semibold"
+      className="relative inline-block px-4 py-4 border border-zinc-700 bg-zinc-900 backdrop-blur-xs text-yellow-300 text-3xl sm:text-4xl md:text-5xl font-semibold"
     >
       <div className="overflow-hidden pb-1">
         <motion.span variants={slideUp} className="inline-block">
@@ -220,15 +213,7 @@ const projectsData=[
     </motion.span>
   </motion.div>
 
-  <motion.div
-  animate={{ y: [0, -8, 0], rotate: [0, 6, 0] }}
-  transition={{ repeat: Infinity, duration: 4 }}
-  className="absolute top-28 right-0 bg-[#1E1E1E] border border-zinc-700 rounded-xl text-zinc-300 mx-4 px-4 py-2 shadow-xl"
->
-  <Headphones  className="inline-block mr-2" />
-  Probably Listening to Music
   
-</motion.div>
 </div>
 
 {/* About Section */}
@@ -236,7 +221,7 @@ const projectsData=[
   initial={{ opacity: 0, y: 40 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.6, delay: 1.2, ease: 'easeOut' }}
-  className="flex flex-row mt-0 items-center justify-center gap-8"
+  className="flex flex-col md:flex-row mt-0 items-center justify-center gap-8"
 >
     <div className="relative inline-block cursor-none"  //hides curosr
     onMouseMove={handleMouseMove}
@@ -246,7 +231,7 @@ const projectsData=[
         <img 
         src={profileImg}
         alt="Suhani Kabra" 
-        className="w-[300px] h-[300px] object-cover rounded-full" 
+        className="w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] object-cover rounded-full" 
         />
 
         {isHovered && (
@@ -325,7 +310,7 @@ I have hands on experience in building real-world projects based on <span classN
         <a href="https://github.com/Suhanii15"
          target="_blank"
   rel="noopener noreferrer">
-       <button className="bg-yellow-400 text-lg font-semibold w-40 rounded-full px-3 py-3 mx-160 mt-3 hover:cursor-pointer tracking-wider">
+       <button className="bg-yellow-400 text-lg font-semibold w-40 rounded-full px-3 py-3 mx-auto sm:mx-160 mt-3 hover:cursor-pointer tracking-wider">
             More Projects
         </button>
         </a>

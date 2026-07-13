@@ -51,10 +51,10 @@ const Navbar = ({ activeSection }) => {
       <button
         type="button"
         onClick={() => handleNavigateToSection('contact')}
-        className="flex flex-row items-center bg-yellow-400 font-semibold cursor-pointer text-slate-900 rounded-full px-2.5 py-1 text-sm hover:bg-yellow-300 group sm:px-3"
+        className="flex flex-row items-center bg-yellow-400 font-semibold cursor-pointer text-slate-900 rounded-full p-2 text-sm hover:bg-yellow-300 group sm:px-3 sm:py-1"
       >
-        Contact Me
-        <Smile className="ml-2 transition-transform duration-300 group-hover:translate-y-[-2px] group-hover:scale-110" />
+        <span className="hidden sm:inline">Contact Me</span>
+        <Smile className="ml-0 sm:ml-2 transition-transform duration-300 group-hover:translate-y-[-2px] group-hover:scale-110" />
       </button>
     </nav>
   )
