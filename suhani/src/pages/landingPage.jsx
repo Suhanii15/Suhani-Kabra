@@ -288,7 +288,7 @@ I have hands on experience in building real-world projects based on <span classN
   onClick={()=>document.getElementById("projects")?.scrollIntoView({behavior : "smooth"})}>
     
     <Badges 
-     className="-mt-4 md:-mt-6 mx-auto mr-0 hover:cursor-pointer" />
+     className="lg:-mt-6 mx-auto mr-0 hover:cursor-pointer" />
     
 </motion.div>
 
